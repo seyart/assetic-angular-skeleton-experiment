@@ -11,6 +11,10 @@ $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../src/views'
 ));
 
+if($app['debug']) {
+    $app->register(new Whoops\Provider\Silex\WhoopsServiceProvider);
+}
+
 $app->get('/', function() use ($app) {
     return $app['twig']->render('index.html.twig');
 });
