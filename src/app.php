@@ -35,7 +35,7 @@ if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
 
     $app['assetic.filter_manager'] = $app->share(
         $app->extend('assetic.filter_manager', function($fm, $app) {
-            $fm->set('lessphp', new Assetic\Filter\LessphpFilter());
+            $fm->set('scssphp', new Assetic\Filter\ScssphpFilter());
 
             return $fm;
         })
@@ -46,7 +46,9 @@ if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
             $am->set('styles', new Assetic\Asset\AssetCache(
                 new Assetic\Asset\GlobAsset(
                     $app['assetic.input.path_to_css'],
-                    array($app['assetic.filter_manager']->get('lessphp'))
+                    array(
+                        $app['assetic.filter_manager']->get('scssphp')
+                    )
                 ),
                 new Assetic\Cache\FilesystemCache($app['assetic.path_to_cache'])
             ));

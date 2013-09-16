@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "59a8179036dd0032ec750da2c7e0572d",
+    "hash": "0cc70ab9959de57237216e86a0e471d0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -587,28 +587,33 @@
             "time": "2013-07-19 00:03:27"
         },
         {
-            "name": "leafo/lessphp",
-            "version": "v0.4.0",
+            "name": "leafo/scssphp",
+            "version": "v0.0.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/leafo/lessphp.git",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "e5a79218c349cbc03dc99004fbad938c7b82391f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/e5a79218c349cbc03dc99004fbad938c7b82391f",
+                "reference": "e5a79218c349cbc03dc99004fbad938c7b82391f",
                 "shasum": ""
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
+            "require": {
+                "php": ">=5.2.0"
             },
+            "require-dev": {
+                "php": ">=5.3.0",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "pscss"
+            ],
+            "type": "library",
             "autoload": {
                 "classmap": [
-                    "lessc.inc.php"
+                    "scss.inc.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -623,9 +628,9 @@
                     "homepage": "http://leafo.net"
                 }
             ],
-            "description": "lessphp is a compiler for LESS written in PHP.",
-            "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-08-09 17:09:19"
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.net/scssphp/",
+            "time": "2013-05-24 14:04:53"
         },
         {
             "name": "mheap/silex-assetic",

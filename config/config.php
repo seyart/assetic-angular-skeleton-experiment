@@ -9,7 +9,9 @@ $app['assetic.path_to_cache'] = $app['cache.path'] . '/assetic' ;
 $app['assetic.path_to_web'] = __DIR__ . '/../web/app';
 $app['assetic.input.path_to_assets'] = __DIR__ . '/../assets';
 
-$app['assetic.input.path_to_css'] = $app['assetic.input.path_to_assets'] . '/less/main.less';
+$app['assetic.input.path_to_css'] = array(
+    $app['assetic.input.path_to_assets'] . '/scss/main.scss',
+);
 $app['assetic.output.path_to_css'] = 'css/styles.css';
 /*
 $app['assetic.input.path_to_js'] = array(
