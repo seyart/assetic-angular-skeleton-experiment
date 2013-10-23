@@ -1,2 +1,3 @@
 cache/assetic
 web/app/css/styles.css
+/vendor
